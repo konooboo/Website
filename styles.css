@@ -1,0 +1,415 @@
+body {
+    background-color: #000000;
+    color: #7f7f7f;
+    font-family: 'Space Mono', monospace;
+    line-height: 1.5;
+    margin: 0;
+    padding: 25px;
+    max-width: 10000px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    cursor: none; /* Hide default cursor */
+    /* This is to make sure that the defauklt mouse doesnt pop up */
+    padding-bottom: 240px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Custom cursor styles */
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    display: block; /* Changed from none to block */
+}
+
+.custom-cursor.site-wide {
+    width: 80px;
+    height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+}
+
+/* Rest of your CSS */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+.header {
+    margin-bottom: 50px;
+}
+
+.bio {
+    max-width: 900px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.studio {
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.section {
+    margin-bottom: 1px;
+}
+
+.section-title {
+    font-size: 13px;
+    margin-bottom: 15px;
+    opacity: 1;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 10px;
+    margin-bottom: 1px;
+    opacity: 0.8;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+.contact-subtitle {
+    font-size: 10px;
+    margin-bottom: 1px;
+    opacity: 0.8;
+    z-index: 100;
+    letter-spacing: 1px;
+}
+
+.project-list, .contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.project-item, .contact-item {
+    display: flex;
+    margin-bottom: 3px;
+    opacity: 0.8;
+    letter-spacing: 0.8px;
+}
+
+.project-number, .contact-number {
+    width: 50px;
+    opacity: 0.6;
+}
+
+.project-title, .contact-title {
+    flex-grow: 1;
+}
+
+.arrow {
+    margin-left: 5px;
+    cursor: none;
+    user-select: none;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow.active {
+    transform: rotate(90deg);
+}
+
+
+/* @keyframes pulse {
+    0% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
+} */
+
+strong {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.clock {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-family: 'Space Mono', monospace;
+    color: #ffffff;
+    font-size: 12px;
+    opacity: 0.8;
+    letter-spacing: 0.7px;
+}
+
+.clock-colon {
+    animation: blink 1s infinite;
+}
+
+.about-link, .contact-title, .work-title, .project-title, .Work, .Projects {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.about-link:hover, .contact-title:hover, .Work:hover, .Projects:hover {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Hide cursor on ALL interactive elements */
+a, 
+button,
+input[type="submit"],
+input[type="button"],
+.section-title,
+.project-title,
+.contact-title,
+[onclick],
+.about-link {
+    cursor: none !important;
+}
+
+/* Overlay Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081061; /* Overlay background */
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow-y: auto; /* Allow scrolling if content is long */
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    padding: 40px;
+    max-width: 800px;
+    margin: 40px auto;
+    color: #828282;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+}
+
+.overlay-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.overlay-header h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0;
+}
+
+.overlay-close {
+    cursor: none;
+    color: #ffffff;
+    font-size: 12px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.overlay-close:hover {
+    opacity: 1;
+}
+
+.overlay-text {
+    font-size: 12px;
+}
+
+.overlay-text p {
+    margin-bottom: 20px;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .overlay-content {
+        padding: 20px;
+        margin: 20px;
+    }
+} 
+
+
+
+/* NEW AUDIO PLAYER STYLES */
+.audio-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    z-index: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    height: 40px;
+    pointer-events: auto;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #ffffff;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 1px;
+    font-size: 12px;
+    position: relative;
+    width: 70%;
+    max-width: 600px;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+}
+
+.audio-control {
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    user-select: none;
+    flex-shrink: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.audio-control:hover {
+    opacity: 1;
+}
+
+.track-info {
+    margin-left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    min-width: 0;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#track-name {
+    display: inline-block;
+    white-space: nowrap;
+    margin-left: 4px;
+}
+
+.now-playing {
+    color: #ffffff;
+    margin-right: 10px;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.now-playing.blink {
+    animation: blink 1s infinite;
+}
+
+.next-btn {
+    font-size: 15px; /* Increase this value to make it bigger */
+}
+
+.next-btn:disabled,
+.audio-control[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* --- AUDIO PLAYER ICONS --- */
+.icon-container {
+    position: relative;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-icon,
+.pause-icon {
+    position: absolute;
+    top: 0; left: 0;
+    width: 13px; height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.15s;
+}
+
+/* Play triangle */
+.play-icon {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 9px solid #fff;
+    opacity: 1;
+}
+
+/* Pause bars */
+.pause-icon {
+    gap: 3px;
+    opacity: 0;
+}
+.pause-line {
+    width: 2px;
+    height: 10px;
+    background: #fff;
+    margin: 0 1px;
+    border-radius: 1px;
+}
+
+/* Toggle visibility with .playing */
+.audio-control.playing .play-icon { opacity: 0; }
+.audio-control.playing .pause-icon { opacity: 1; }
+
+/* Mouse follow effect */
+.mouse-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, 
+        rgba(190, 149, 255, 0.165) 0%,
+        rgba(190, 149, 255, 0.085) 20%,
+        rgba(190, 149, 255, 0.04) 40%,
+        transparent 80%
+    );
+    pointer-events: none;
+    z-index: 1;
+    margin-left: -250px;
+    margin-top: -250px;
+    transition: background 0.15s ease-out;
+    will-change: transform, background;
+    mix-blend-mode: screen;
+}

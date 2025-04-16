@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manu Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Custom cursor element -->
+    <div class="custom-cursor site-wide">[CLICK]</div>    
+    <div class="header">
+        <div class="bio">
+            <p><strong>Manu Williams</strong> (2004- ) is an aspiring software engineer from Wellington, Aotearoa currently living in <strong>Aarhus, Denmark</strong>.</p>
+            
+            <p>In opposition to the digital world's immediacy, the work here remains deliberate — developing thoughtfully while building a cohesive body of work exploring perception, Usability, and functionality.</p>
+        </div>
+        
+        <div class="studio">
+            <p>Operates studio <strong>manurangi.com</strong></p>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Essential Viewing</div>
+        <div class="section-subtitle">↓</div>
+        <ul class="project-list">
+            <li class="project-item">
+                <div class="project-number">001</div>
+                <div class="project-title"><a href="Work.html" class="Work">Work</a></div>
+            </li>
+            <li class="project-item">
+                <div class="project-number">001</div>
+                <div class="project-title"><a href="Projects.html" class="Projects">Projects</a></div>
+            </li>
+            <li class="project-item">
+                <div class="project-number">003</div>
+                <div class="project-title"><a href="Education.html" class="Education">Education</a></div>
+            </li>
+            <li class="project-item">
+                <div class="project-number">005</div>
+                <div class="project-title"><a href="about.html" class="about-link">About</a></div>
+            </li>
+            <li class="project-item">
+                <div class="project-number">005</div>
+                <div class="project-title"></div>
+            </li>
+            <li class="project-item">
+                <div class="project-number">006</div>
+                <div class="project-title" onclick="openOverlay()">Information</div>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <div class="section-title">Contact</div>
+        <div class="contact-subtitle">↓</div>
+        <ul class="contact-list">
+            <li class="contact-item" id="email-contact">
+                <div class="contact-title">
+                    <a href="mailto:manu@manurangi.com" id="email-link"><strong>Email</strong></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="clock"></div>
+
+    <!-- Fullscreen Overlay -->
+    <div class="overlay" id="infoOverlay">
+        <div class="overlay-content">
+            <div class="overlay-header">
+                <h2>ME</h2>
+                <div class="overlay-close" onclick="closeOverlay()">[CLOSE]</div>
+            </div>
+            <div class="overlay-text">
+                <p>Born 2004 in Wellington, Aotearoa.</p>
+                <p>Currently exploring the intersection of software engineering and design.</p>
+                <p> <strong> Working on</strong> developing machine learnig solutions to fitness and health</p> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <div class="audio-controls">
+            <div class="audio-control play-btn" id="playButton">
+                <div class="icon-container">
+                    <div class="play-icon"></div>
+                    <div class="pause-icon">
+                        <div class="pause-line"></div>
+                        <div class="pause-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-control next-btn" id="nextButton">>></div>
+            <div class="track-info">
+                <span class="now-playing">Now Playing:</span>
+                <span id="track-name"></span>
+            </div>
+        </div>
+        <audio id="audio-element" src="path-to-your-audio-file.mp3"></audio>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
