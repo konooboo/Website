@@ -101,21 +101,21 @@ function initAudioPlayer() {
     //track playlist
     const playlist = [
         { title: 'Aphex Twin - Xtal', src: 'Music/Aphex Twin-Xtal.mp3' },
-        { title: 'Underworld - Born Slippy', src: 'Music/Underworld - Born Slippy.mp3' },
+        { title: 'Underworld - Born Slippy', src: 'Music/Born Slippy (Nuxx).mp3' },
         { title: 'Stekker - U Kno 92', src: 'Music/U Kno 92.mp3' },
-        { title: 'Travis Scott - Stop Trying To Be God', src: 'Music/Travis Scott - STTBG.mp3' },
+        { title: 'Travis Scott - Stop Trying To Be God', src: 'Music/Travis Scott - STTBG(Audio).mp3' },
         { title: 'Skepta - Track 2', src: 'Music/Skepta - Blacklisted - Track 2.mp3' },
         { title: 'Frank Ocean - Songs for Women', src: 'Music/Songs for Women.mp3' },
         { title: 'King Krule - Foreign 2', src: 'Music/Foreign 2.mp3' },
         { title: 'Loyle Carner - Ottolenghi', src: 'Music/Ottolenghi.mp3' },
         { title: 'Blue Iverson - Coy Boy', src: 'Music/Coy Boy.mp3' },
-        { title: 'CatierGod - LondonNights', src: 'Music/#LondonNights.mp3' },
+        { title: 'CartierGod - LondonNights', src: 'Music/LondonNights.mp3' },
         { title: 'Robert Hood - A System Of Mirrors', src: 'Music/Robert Hood - A System Of Mirrors.mp3' },
-        { title: 'Bicep - Glue', src: 'Music/Glue.mp3' },
-        { title: 'Helly larson - Glimmer of Hope', src: 'Music/Glimmer of Hope.mp3' },
+        { title: 'Bicep - Glue', src: 'Music/Bicep .mp3' },
+        { title: 'Helly larson - Glimmer of Hope', src: 'Music/Helly Larson - Glimmer of hope.mp3' },
     ];
     
-    let currentTrackIndex = 0;
+    let currentTrackIndex = Math.floor(Math.random() * playlist.length);
     let isPlaying = false;
     
     // Initialize the first track
