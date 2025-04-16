@@ -34,7 +34,6 @@ body {
     z-index: 10000;
 }
 
-/* Rest of your CSS */
 a {
     color: #ffffff;
     text-decoration: none;
@@ -119,18 +118,6 @@ a:hover {
     transform: rotate(90deg);
 }
 
-
-/* @keyframes pulse {
-    0% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.4;
-    }
-    100% {
-        opacity: 0.8;
-    }
-} */
 
 strong {
     color: #ffffff;
@@ -336,7 +323,7 @@ input[type="button"],
 }
 
 .next-btn {
-    font-size: 15px; /* Increase this value to make it bigger */
+    font-size: 15px; 
 }
 
 .next-btn:disabled,

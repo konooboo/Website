@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    font-family: 'Space Mono', monospace;
+    background-color: #000000;
+    color: #818181;
+}
+
+strong {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.header {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.bio h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    opacity: 1;
+    letter-spacing: 10px;
+}
+
+.bio p {
+    font-size: 12px;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    letter-spacing: 0.8px;
+}
+
+.section {
+    margin-top: 2rem;
+    text-align: left;
+    letter-spacing: 0.8px;
+}
+
+.section-title {
+    font-size: 13px;
+    margin-bottom: 15px;
+    opacity: 1;
+    letter-spacing: 1px;
+}
+
+.section-subtitle {
+    font-size: 10px;
+    margin-bottom: 8px;
+    opacity: 0.8;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+.project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-item {
+    display: flex;
+    margin-bottom: 3px;
+    opacity: 0.8;
+    letter-spacing: 0.8px;
+}
+
+.project-number {
+    width: 50px;
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+.project-title {
+    flex-grow: 1;
+    font-size: 12px;
+}
+
+.project-title a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.project-title a:hover {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+} 

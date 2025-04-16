@@ -23,8 +23,8 @@ function initCustomCursor() {
     // Track cursor position - exactly centered on mouse
     document.addEventListener('mousemove', (e) => {
         // Get scroll position
-        const scrollX = window.scrollX || window.pageXOffset;
-        const scrollY = window.scrollY || window.pageYOffset;
+        const scrollX = window.scrollX;
+        const scrollY = window.scrollY;
         
         // Calculate positions including scroll
         const mouseX = e.clientX;
@@ -86,7 +86,7 @@ document.addEventListener('keydown', function(e) {
 
 // Allow clicking outside the content to close the overlay
 document.getElementById('infoOverlay').addEventListener('click', function(e) {
-    // Only close if the click was directly on the overlay background, not its children
+    // Only close if the click was directly on the overlay background
     if (e.target === this) {
         closeOverlay();
     }
@@ -97,14 +97,24 @@ function initAudioPlayer() {
     const playButton = document.getElementById('playButton');
     const nextButton = document.getElementById('nextButton');
     const trackName = document.getElementById('track-name');
-    
-    // Playlist of tracks (you can add more)
+    //track playlist
     const playlist = [
-        { title: 'Gallery S - Lauryns Wise Words', src: 'Music/Gallery S - Lauryn\'s Wise Words.mp3' },
-        { title: 'Daft Punk - Giorgio by Moroder', src: 'Music/Daft Punk - Giorgio by Moroder (Random Access Memories).mp3' },
-        { title: 'Aphex Twin - Xtal', src: 'Music/Aphex Twin-Xtal.mp3' },
+        { title: 'Aphex Twin - Xtal', src: 'Music/Aphex Twin-Xtal.mp3' }
 
-        // Add more tracks as needed
+        // Add tracks needed
+
+                // { 
+        //     title: 'Gallery S - Lauryns Wise Words', 
+        //     src: 'https://s3.amazonaws.com/Gallery-S-Lauryns-Wise-Words.mp3' 
+        // },
+        // { 
+        //     title: 'Daft Punk - Giorgio by Moroder', 
+        //     src: 'https://s3.amazonaws.com/Daft-Punk-Giorgio-by-Moroder.mp3' 
+        // },
+        // { 
+        //     title: 'Aphex Twin - Xtal', 
+        //     src: 'https://s3.amazonaws.com/Aphex-Twin-Xtal.mp3' 
+        // },
     ];
     
     let currentTrackIndex = 0;
@@ -156,7 +166,7 @@ function initAudioPlayer() {
         // Start the typing animation
         let i = 0;
         const text = track.title;
-        const speed =30; // typing speed in milliseconds
+        const speed =30; // typing speed in ms
         
         function typeWriter() {
             if (i < text.length) {
