@@ -107,12 +107,16 @@ function initAudioPlayer() {
         { title: 'Skepta - Track 2', src: 'Music/Skepta - Blacklisted - Track 2.mp3' },
         { title: 'Frank Ocean - Songs for Women', src: 'Music/Songs for Women.mp3' },
         { title: 'King Krule - Foreign 2', src: 'Music/Foreign 2.mp3' },
+        { title: 'Lolyle Carner - Sun Of Jean', src: 'Music/Loyle Carner - Sun Of Jean.mp3' },
         { title: 'Loyle Carner - Ottolenghi', src: 'Music/Ottolenghi.mp3' },
         { title: 'Blue Iverson - Coy Boy', src: 'Music/Coy Boy.mp3' },
         { title: 'CartierGod - LondonNights', src: 'Music/LondonNights.mp3' },
-        { title: 'Robert Hood - A System Of Mirrors', src: 'Music/Robert Hood - A System Of Mirrors.mp3' },
         { title: 'Bicep - Glue', src: 'Music/Bicep .mp3' },
+        { title: 'Robert Hood - A System Of Mirrors', src: 'Music/Robert Hood - A System Of Mirrors.mp3' },
         { title: 'Helly larson - Glimmer of Hope', src: 'Music/Helly Larson - Glimmer of hope.mp3' },
+        { title: 'Vegyn - The Path Less Travelled', src: 'Music/The Path Less Travelled.mp3' },
+        { title: 'Berlioz - Free Fall', src: 'Music/free fall.mp3' },
+        { title: 'Portishead - Glory Box', src: 'Music/glory box-portishead.mp3' }
     ];
     
     let currentTrackIndex = Math.floor(Math.random() * playlist.length);
