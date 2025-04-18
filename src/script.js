@@ -100,23 +100,22 @@ function initAudioPlayer() {
 
     //track playlist
     const playlist = [
-        { title: 'Aphex Twin - Xtal', src: 'Music/Aphex Twin-Xtal.mp3' },
-        { title: 'Underworld - Born Slippy', src: 'Music/Born Slippy (Nuxx).mp3' },
-        { title: 'Stekker - U Kno 92', src: 'Music/U Kno 92.mp3' },
-        { title: 'Travis Scott - Stop Trying To Be God', src: 'Music/Travis Scott - STTBG(Audio).mp3' },
-        { title: 'Skepta - Track 2', src: 'Music/Skepta - Blacklisted - Track 2.mp3' },
-        { title: 'Frank Ocean - Songs for Women', src: 'Music/Songs for Women.mp3' },
-        { title: 'King Krule - Foreign 2', src: 'Music/Foreign 2.mp3' },
-        { title: 'Lolyle Carner - Sun Of Jean', src: 'Music/Loyle Carner - Sun Of Jean.mp3' },
-        { title: 'Loyle Carner - Ottolenghi', src: 'Music/Ottolenghi.mp3' },
-        { title: 'Blue Iverson - Coy Boy', src: 'Music/Coy Boy.mp3' },
-        { title: 'CartierGod - LondonNights', src: 'Music/LondonNights.mp3' },
-        { title: 'Bicep - Glue', src: 'Music/Bicep .mp3' },
-        { title: 'Robert Hood - A System Of Mirrors', src: 'Music/Robert Hood - A System Of Mirrors.mp3' },
-        { title: 'Helly larson - Glimmer of Hope', src: 'Music/Helly Larson - Glimmer of hope.mp3' },
-        { title: 'Vegyn - The Path Less Travelled', src: 'Music/The Path Less Travelled.mp3' },
-        { title: 'Berlioz - Free Fall', src: 'Music/free fall.mp3' },
-        { title: 'Portishead - Glory Box', src: 'Music/glory box-portishead.mp3' }
+        { title: 'Aphex Twin - Xtal', src: 'assets/music/Aphex Twin-Xtal.mp3' },
+        { title: 'Underworld - Born Slippy', src: 'assets/music/Born Slippy (Nuxx).mp3' },
+        { title: 'Stekker - U Kno 92', src: 'assets/music/U Kno 92.mp3' },
+        { title: 'Travis Scott - Stop Trying To Be God', src: 'assets/music/Travis Scott - STTBG(Audio).mp3' },
+        { title: 'Skepta - Track 2', src: 'assets/music/Skepta - Blacklisted - Track 2.mp3' },
+        { title: 'King Krule - Foreign 2', src: 'assets/music/Foreign 2.mp3' },
+        { title: 'Lolyle Carner - Sun Of Jean', src: 'assets/music/Loyle Carner - Sun Of Jean.mp3' },
+        { title: 'Loyle Carner - Ottolenghi', src: 'assets/music/Ottolenghi.mp3' },
+        { title: 'Blue Iverson - Coy Boy', src: 'assets/music/Coy Boy.mp3' },
+        { title: 'CartierGod - LondonNights', src: 'assets/music/LondonNights.mp3' },
+        { title: 'Bicep - Glue', src: 'assets/music/Bicep .mp3' },
+        { title: 'Robert Hood - A System Of Mirrors', src: 'assets/music/Robert Hood - A System Of Mirrors.mp3' },
+        { title: 'Helly larson - Glimmer of Hope', src: 'assets/music/Helly Larson - Glimmer of hope.mp3' },
+        { title: 'Vegyn - The Path Less Travelled', src: 'assets/music/The Path Less Travelled.mp3' },
+        { title: 'Berlioz - Free Fall', src: 'assets/music/free fall.mp3' },
+        { title: 'Portishead - Glory Box', src: 'assets/music/glory box-portishead.mp3' }
     ];
     
     let currentTrackIndex = Math.floor(Math.random() * playlist.length);
