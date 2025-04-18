@@ -174,7 +174,7 @@ input[type="button"],
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #081061; /* Overlay background */
+    background-color: rgb(40, 21, 72); /* Overlay background */
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
