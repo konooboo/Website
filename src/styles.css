@@ -174,7 +174,7 @@ input[type="button"],
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(40, 21, 72); /* Overlay background */
+    background-color: rgb(46, 3, 215); /* Overlay background */
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
@@ -239,7 +239,14 @@ input[type="button"],
     }
     
     .audio-player {
-        display: none;
+        display: none !important;
+    }
+
+    /* Make copyright more visible on mobile */
+    .copyright {
+        bottom: 15px;
+        right: 15px;
+        font-size: 11px;
     }
 } 
 
