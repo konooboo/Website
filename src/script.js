@@ -101,6 +101,7 @@ function initAudioPlayer() {
         { title: 'Underworld - Born Slippy', src: 'assets/music/Born Slippy (Nuxx).mp3' },
         { title: 'Stekker - U Kno 92', src: 'assets/music/U Kno 92.mp3' },
         { title: 'Southstar - East', src: 'assets/music/Southstar - East.mp3'},
+        { title: 'Cult Member - Fantastic Life', src: 'assets/music/Fantastic Life.mp3'},
         { title: 'Skepta - Track 2', src: 'assets/music/Skepta - Blacklisted - Track 2.mp3' },
         { title: 'King Krule - Foreign 2', src: 'assets/music/Foreign 2.mp3' },
         { title: 'Lolyle Carner - Sun Of Jean', src: 'assets/music/Loyle Carner - Sun Of Jean.mp3' },
