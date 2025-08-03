@@ -98,7 +98,8 @@ function initAudioPlayer() {
     //track playlist
     const playlist = [
         { title: 'Aphex Twin - Xtal', src: 'assets/music/Aphex Twin-Xtal.mp3' },
-        { title: 'Underworld - Born Slippy', src: 'assets/music/Born Slippy (Nuxx).mp3' },
+        { title: 'Cult Member - _ca22xe', src: 'assets/music/_ca22xe.mp3'},
+        { title: 'Underworld - Born Slippy', src: 'assets/music/Born Slippy (Nuxx).mp3' }, 
         { title: 'Stekker - U Kno 92', src: 'assets/music/U Kno 92.mp3' },
         { title: 'Southstar - East', src: 'assets/music/Southstar - East.mp3'},
         { title: 'Cult Member - Fantastic Life', src: 'assets/music/Fantastic Life.mp3'},

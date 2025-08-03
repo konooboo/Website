@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Manu Williams</title>
+
+    <!-- Favicon links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="projects-page">
+    
+    <!-- Custom cursor element -->
+    <div class="custom-cursor site-wide">[CLICK]</div>    
+    
+    <div class="projects-container">
+        <a href="/" class="back-button">← Go back</a>
+        <div class="header">
+            <div class="bio">
+                <p><strong>Projects</strong></p>
+                <p>A collection of work exploring software engineering, design, and functionality.</p>
+            </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+        <div class="project-card" onclick="openProject('project1')">
+            <div class="project-image">
+            </div>
+            <div class="project-info">
+                <h3>Link, Transport App</h3>
+                <p>A mobile app for tracking and taking public transport.</p>
+                <div class="project-tags">
+                    <span class="tag">Figma</span>
+                    <span class="tag">UI/UX design</span>
+                    <span class="tag">User Research</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" > <!-- onclick="openProject('project2')" -->
+            <div class="project-image">
+            </div>
+            <div class="project-info">
+                <h3>Scratch Challenge</h3>
+                <p>A fun Java game, involving multiple levels and various in-game challenges</p>
+                <div class="project-tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">JSON processing</span>
+                    <span class="tag">GIT</span>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card" > <!-- onclick="openProject('P3')"> -->
+            <div class="project-image">
+            </div>
+            <div class="project-info">
+                <h3>P#</h3>
+                <p> <3 </p>
+                <div class="project-tags">
+                    <span class="tag">Typescript</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Figma</span>
+                    <span class="tag">HTML</span>
+                    <span class="tag">Node.js</span>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="clock"></div>
+
+    <!-- Audio Player -->
+    <div class="audio-player">
+        <div class="audio-controls">
+            <div class="audio-control play-btn" id="playButton">
+                <div class="icon-container">
+                    <div class="play-icon"></div>
+                    <div class="pause-icon">
+                        <div class="pause-line"></div>
+                        <div class="pause-line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="audio-control next-btn" id="nextButton">>></div>
+            <div class="track-info">
+                <span class="now-playing">Now Playing:</span>
+                <span id="track-name"></span>
+            </div>
+        </div>
+        <audio id="audio-element" src="path-to-your-audio-file.mp3"></audio>
+    </div>
+
+    <script src="src/script.js"></script>
+    <script src="src/projects.js"></script>
+    <footer class="copyright">
+        © Manu Williams 2025
+    </footer>
+</body>
+</html> 
