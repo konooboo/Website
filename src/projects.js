@@ -168,7 +168,7 @@ function openProject(projectId) {
                 ${project.heroImage ? `
                 <!-- Custom Hero Image -->
                 <div class="project-hero-image">
-                    <img src="${project.heroImage}" alt="${project.title}" class="hero-image">
+                    <img src="${project.heroImage}" alt="${project.title}" class="hero-image" loading="lazy" decoding="async">
                 </div>
                 ` : `
                 <!-- Hero Image Placeholder -->
@@ -256,7 +256,7 @@ function openProject(projectId) {
                             ` : index === 1 && project.process ? `
                             <!-- Process Image from project data -->
                             <div class="process-image">
-                                <img src="${project.process}" alt="Process" class="process-image">
+                                <img src="${project.process}" alt="Process" class="process-image" loading="lazy" decoding="async">
                             </div>
                             ` : section.image ? `
                             <!-- Custom Process Image -->
@@ -292,7 +292,7 @@ function openProject(projectId) {
                     <h3>Colour Palette</h3>
                     <p>The colour palette was selected to ensure accessibility and visual hierarchy. The primary colors provide contrast for text and interactive elements, while the secondary palette supports the overall design language. This approach ensured consistency across all components and maintains the app's appearance, if I were to revisit this I would add a stronger contrasting colour, to aid the hierarchy and some more distinctive elements</p>
                     <div class="color-palette-image">
-                        <img src="${project.colorPalette}" alt="Color Palette" class="color-palette-img">
+                        <img src="${project.colorPalette}" alt="Color Palette" class="color-palette-img" loading="lazy" decoding="async">
                     </div>
                 </div>
                 ` : ''}
@@ -303,7 +303,7 @@ function openProject(projectId) {
                     <h3>Main Components</h3>
                     <p>The component library was Made from scratch in Figma, with reusability and consistency in mind. The modular approach allows for easy maintenance and ensures that future updates can be implemented efficiently across the entire application.</p>
                     <div class="components-image">
-                        <img src="${project.components}" alt="Components" class="components-img">
+                        <img src="${project.components}" alt="Components" class="components-img" loading="lazy" decoding="async">
                     </div>
                 </div>
                 ` : ''}
@@ -315,11 +315,11 @@ function openProject(projectId) {
                     <h3>Final Designs</h3>
                     <p>The final designs represent the culmination of the entire design process, initial user research, and technical requirements. Each screen has been crafted to provide an intuitive experience, with attention paid to the consitency and interaction patterns that users expect from modern transportation applications.</p>
                     <div class="demo-image">
-                        <img src="${project.demoImage}" alt="Demo" class="demo-image">
+                        <img src="${project.demoImage}" alt="Demo" class="demo-image" loading="lazy" decoding="async">
                     </div>
                     ${project.demoImage2 ? `
                     <div class="demo-image">
-                        <img src="${project.demoImage2}" alt="Demo Part 2" class="demo-image">
+                        <img src="${project.demoImage2}" alt="Demo Part 2" class="demo-image" loading="lazy" decoding="async">
                     </div>
                     ` : ''}
                 </div>
@@ -339,7 +339,7 @@ function openProject(projectId) {
                     <h3>Live Notifications</h3>
                     <p>The live notifications system were designed to give users with immediate, relevant information about their journey. This feature enhances the overall user experience by reducing uncertainty and providing updates about delays, route changes, and arrival times. The notification design prioritizes clarity and actionable information.</p>
                     <div class="notifications-image">
-                        <img src="${project.liveNotifications}" alt="Live Notifications" class="notifications-img">
+                        <img src="${project.liveNotifications}" alt="Live Notifications" class="notifications-img" loading="lazy" decoding="async">
                     </div>
                 </div>
                 ` : ''}
@@ -349,7 +349,7 @@ function openProject(projectId) {
                     <h3>Interactive Prototypes & Animations</h3>
                     <p>The design is fully animated using Figma's prototyping features, a challenge to myself to see how far user experience could be pushed with no code. Each interaction has been fleshed out, with transitions, micro-animations, and state changes that bring the interface to life. This allows demonstraton of real user flows including journey planning, ticket purchase, and a fully functional map. Allowing experience of the app's functionality before real development.</p>
                     <div class="demo-image">
-                        <img src="assets/images/Proto.png" alt="Figma Prototypes and Animations" class="demo-image">
+                        <img src="assets/images/Proto.png" alt="Figma Prototypes and Animations" class="demo-image" loading="lazy" decoding="async">
                     </div>
                 </div>
 

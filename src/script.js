@@ -20,25 +20,35 @@ function initCustomCursor() {
     cursor.style.display = 'block';
     cursor.style.opacity = '0.7';
     
-    document.addEventListener('mousemove', (e) => {
-        // Get scroll position
-        const scrollX = window.scrollX;
-        const scrollY = window.scrollY;
-        
-        // Calculate positions including scroll
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        
-        // Update cursor
-        cursor.style.left = `${mouseX}px`;
-        cursor.style.top = `${mouseY}px`;
-        
-        // Update glow - use positioning relative to viewport
-        requestAnimationFrame(() => {
-            mouseGlow.style.left = `${mouseX}px`;
-            mouseGlow.style.top = `${mouseY}px`;
-        });
-    });
+    // Debounce function for performance
+    let ticking = false;
+    
+    function updateCursor(e) {
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                // Get scroll position
+                const scrollX = window.scrollX;
+                const scrollY = window.scrollY;
+                
+                // Calculate positions including scroll
+                const mouseX = e.clientX;
+                const mouseY = e.clientY;
+                
+                // Update cursor
+                cursor.style.left = `${mouseX}px`;
+                cursor.style.top = `${mouseY}px`;
+                
+                // Update glow - use positioning relative to viewport
+                mouseGlow.style.left = `${mouseX}px`;
+                mouseGlow.style.top = `${mouseY}px`;
+                
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+    
+    document.addEventListener('mousemove', updateCursor, { passive: true });
     
     // Only change cursor opacity when clicking
     document.addEventListener('mousedown', () => {
@@ -239,7 +249,7 @@ function initAudioPlayer() {
         if (!audioElement.paused) {
             localStorage.setItem('currentTime', audioElement.currentTime);
         }
-    }, 1000);
+    }, 5000); // Changed from 1000ms to 5000ms to reduce localStorage writes
 
     // Save state when leaving page
     window.addEventListener('beforeunload', () => {

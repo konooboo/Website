@@ -2,6 +2,7 @@
 .projects-page {
     background-color: #000000;
     color: #7f7f7f;
+    will-change: auto; /* Optimize for performance */
 }
 
 /* Create a container that aligns with the body padding */
@@ -9,6 +10,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 25px;
+    contain: layout style; /* CSS containment for better performance */
 }
 
 .projects-page .header {
@@ -513,6 +515,9 @@
     height: auto;
     display: block;
     border-radius: 12px;
+    will-change: transform; /* Optimize for potential animations */
+    backface-visibility: hidden; /* Prevent flickering */
+    transform: translateZ(0); /* Force hardware acceleration */
 }
 
 .hero-image {
