@@ -376,6 +376,12 @@
     color: #ffffff;
 }
 
+.project-components p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #7f7f7f;
+}
+
 .components-image {
     margin: 2rem 0;
     border-radius: 12px;
@@ -402,6 +408,12 @@
     color: #ffffff;
 }
 
+.project-notifications p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #7f7f7f;
+}
+
 .notifications-image {
     margin: 2rem 0;
     border-radius: 12px;
@@ -426,6 +438,12 @@
     font-size: 1.6rem;
     margin-bottom: 1rem;
     color: #ffffff;
+}
+
+.project-color-palette p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #7f7f7f;
 }
 
 .color-palette-image {
@@ -565,6 +583,12 @@
     font-size: 1.6rem;
     margin-bottom: 1rem;
     color: #ffffff;
+}
+
+.project-demo p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    color: #7f7f7f;
 }
 
 .project-demo .demo-image {

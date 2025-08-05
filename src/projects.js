@@ -15,20 +15,20 @@ const projects = {
         logo: "assets/images/Link.png",
         heroImage: "assets/images/Appheader.jpg",
         process: "assets/images/Wireframes.jpg",
-        overview: "Link is a comprehensive public transport app UI/UX design project that reimagines how commuters navigate urban transportation systems. This Figma-based design solution addresses the usability issues of existing transport apps through user-centered design principles, creating an intuitive interface that ensures users can plan their journeys with confidence.",
-        problem: "After experiencing the frustrations of existing public transport apps, I realized there was a significant gap in the market for a truly user-centered transportation solution. Carrying on from a university project, I identified issues with public transport systems in New Zealand. Time spent in Denmark inspired me to implement similar forms of public transport navigation, catered towards real users and accounting for all kinds of groups - elderly, regular commuters, and accessible users among others. Traditional apps often prioritize features over usability, leading to confusion and missed connections for commuters who need reliable journey planning.",
+        overview: "Link is a comprehensive public transport UI/UX design project that reimagines how commuters can navigate urban transportation. This design puts a modern twist on existing transport apps through a user-focused approach, creating an intuitive interface that ensures users can plan their journeys with confidence.",
+        problem: "After experiencing the frustrations of existing public transport apps, I realized there was no real one size fits all Public Transport app. Carrying on from a university project, I identified issues with public transport systems in New Zealand. Time spent in Denmark inspired me to implement similar forms of public transport navigation, catered towards real users and accounting for all kinds of groups - elderly, regular commuters, and accessible users among others. Traditional apps often prioritize features over usability, leading to confusion and missed connections for commuters who need reliable journey planning.",
         features: [
             {
-                title: "Real-time Journey Planning",
-                description: "Designed an intelligent route optimization interface that clearly displays real-time delays, traffic conditions, and user preferences to suggest the best possible routes with intuitive visual feedback."
+                title: "Real-time Journey and Transport Tracking",
+                description: "Designed a real time interface to monitor public transport systems within the region, clearly displaying delays, traffic conditions, and user preferences to suggest the best possible routes with real visual feedback."
             },
             {
                 title: "Interactive Map Interface",
-                description: "Created an intuitive map view design with clear visual hierarchy, displaying transport routes, stops, and real-time vehicle locations using color-coded lines for different transport modes."
+                description: "Created a  map view design with clear visual hierarchy, displaying transport routes, stops, and real-time vehicle locations, color-coded for different transport modes."
             },
             {
                 title: "Accessibility Features",
-                description: "Designed comprehensive accessibility features including voice navigation interfaces, high contrast mode designs, and step-free route options with clear visual indicators for users with different needs."
+                description: "Designed accessibility features into interfaces, leaving room for further expansion in development, some proposed features include high contrast designs, and step-free route options with clear visual indicators for users with different needs."
             }
         ],
         building: [
@@ -38,17 +38,17 @@ const projects = {
             },
             {
                 title: "Figma Prototyping & Iteration",
-                description: "Built comprehensive wireframes and high-fidelity prototypes in Figma, focusing on intuitive navigation and clear information hierarchy. Created interactive prototypes for user testing and iterated based on feedback to ensure optimal usability."
+                description: "Built comprehensive wireframes and mid-fidelity prototypes in Figma, focusing on intuitivity and clear informational hierarchy. Created interactive prototypes for user testing and iterated based on feedback to ensure optimal usability."
             }
         ],
         designConsiderations: [
             {
                 title: "Information Architecture",
-                description: "After wireframing, the focus was creating a clear information hierarchy that prioritises the most important actions. The main navigation was designed to be accessible, with secondary features organised with easy access."
+                description: "After wireframing, the focus was iterating and creating a clearer interface prioritised the most important actions. The main navigation was designed to be accessible, with secondary features available with single clicks or swipes, perfect for the regular commuter."
             },
             {
                 title: "Interaction Design",
-                description: "Micro-interactions and feedback mechanisms were designed to provide users with clear confirmation of their actions. This includes visual transitions, app feedback, and loading states that maintain user confidence throughout the journey."
+                description: "Feedback mechanisms and micro-interactions were designed to provide users with clear confirmation of their actions. This includes visual transitions, app feedback and confirmation screens. visual feedback was achieved through extensive Figma prototyping and user testing."
             }
         ],
         typography: {
@@ -57,11 +57,11 @@ const projects = {
             description: "Inter was selected for its excellent readability across different screen sizes and its modern, clean aesthetic. The type scale ensures consistent hierarchy while maintaining accessibility standards for users with visual impairments."
         },
         components: "assets/images/Main components.jpg",
-        liveNotifications: "assets/images/Live Notifications.jpg",
+        liveNotifications: "assets/images/LiveNotification.jpg",
         colorPalette: "assets/images/Colour Pallette.jpg",
         demoImage: "assets/images/Designs PT1.jpg",
         demoImage2: "assets/images/Designs PT2.jpg",
-        results: "This project taught important principles on the complete UX/UI design process from research to final deliverables. The User focused approach resulted in a comprehensive design that addresses real user pain points and allows for room to expand. This project is also available on Figma and is fully interactable"
+        results: "This project taught important principles on the complete UX/UI design process from research to final deliverables. The User focused approach resulted in a comprehensive design that addresses real issues in our current digital infrastructure."
     },
     project2: {
         title: "",
@@ -289,7 +289,8 @@ function openProject(projectId) {
                 ${project.colorPalette ? `
                 <!-- Color Palette Image -->
                 <div class="project-color-palette">
-                    <h3>Color Palette</h3>
+                    <h3>Colour Palette</h3>
+                    <p>The colour palette was selected to ensure accessibility and visual hierarchy. The primary colors provide contrast for text and interactive elements, while the secondary palette supports the overall design language. This approach ensured consistency across all components and maintains the app's appearance, if I were to revisit this I would add a stronger contrasting colour, to aid the hierarchy and some more distinctive elements</p>
                     <div class="color-palette-image">
                         <img src="${project.colorPalette}" alt="Color Palette" class="color-palette-img">
                     </div>
@@ -300,6 +301,7 @@ function openProject(projectId) {
                 <!-- Components Image -->
                 <div class="project-components">
                     <h3>Main Components</h3>
+                    <p>The component library was Made from scratch in Figma, with reusability and consistency in mind. The modular approach allows for easy maintenance and ensures that future updates can be implemented efficiently across the entire application.</p>
                     <div class="components-image">
                         <img src="${project.components}" alt="Components" class="components-img">
                     </div>
@@ -311,6 +313,7 @@ function openProject(projectId) {
                 <!-- Custom Demo Images -->
                 <div class="project-demo">
                     <h3>Final Designs</h3>
+                    <p>The final designs represent the culmination of the entire design process, initial user research, and technical requirements. Each screen has been crafted to provide an intuitive experience, with attention paid to the consitency and interaction patterns that users expect from modern transportation applications.</p>
                     <div class="demo-image">
                         <img src="${project.demoImage}" alt="Demo" class="demo-image">
                     </div>
@@ -330,15 +333,25 @@ function openProject(projectId) {
                 </div>
                 `}
 
-
                 ${project.liveNotifications ? `
                 <!-- Live Notifications Image -->
                 <div class="project-notifications">
+                    <h3>Live Notifications</h3>
+                    <p>The live notifications system were designed to give users with immediate, relevant information about their journey. This feature enhances the overall user experience by reducing uncertainty and providing updates about delays, route changes, and arrival times. The notification design prioritizes clarity and actionable information.</p>
                     <div class="notifications-image">
                         <img src="${project.liveNotifications}" alt="Live Notifications" class="notifications-img">
                     </div>
                 </div>
                 ` : ''}
+
+                <!-- Figma Prototypes and Animations Section -->
+                <div class="project-demo">
+                    <h3>Interactive Prototypes & Animations</h3>
+                    <p>The design is fully animated using Figma's prototyping features, a challenge to myself to see how far user experience could be pushed with no code. Each interaction has been fleshed out, with transitions, micro-animations, and state changes that bring the interface to life. This allows demonstraton of real user flows including journey planning, ticket purchase, and a fully functional map. Allowing experience of the app's functionality before real development.</p>
+                    <div class="demo-image">
+                        <img src="assets/images/Proto.png" alt="Figma Prototypes and Animations" class="demo-image">
+                    </div>
+                </div>
 
                 ${project.results ? `
                 <div class="project-section">
