@@ -6,11 +6,10 @@
     <title>About - Manu Williams</title>
 
     <!-- Favicon links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-    <link rel="manifest" href="assets/icons/site.webmanifest">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <link rel="stylesheet" href="src/styles.css">
     <link rel="stylesheet" href="src/about.css">
@@ -23,61 +22,166 @@
     <!-- Custom cursor element -->
     <div class="custom-cursor site-wide">[CLICK]</div>    
     
-    <div class="header">
-        <div class="bio">
-            <p><strong>--</strong></p>
+    <div class="about-container">
+        <a href="/" class="back-button">← Go back</a>
+
+        <div class="about-content">
+            <div class="about-section">
+                <h2 class="section-title">Featured Content</h2>
+                <div class="section-subtitle">↓</div>
+                
+                <div class="video-grid">
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/01zfj0EAaJk"
+                                title="YouTube video player"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3><a href="https://www.youtube.com/watch?v=01zfj0EAaJk" target="_blank">Victoria Park, 2023</a></h3>
+                            <p>a short video in victoria park, 2023 (Shot by Kahu Hutton)</p>
+                            <p>Otatahau (chch), nz</p>
+                            <a href="https://www.youtube.com/watch?v=01zfj0EAaJk" target="_blank" class="video-link">Watch on YouTube →</a>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-container">
+                            <iframe 
+                                src="https://www.youtube-nocookie.com/embed/SO38mRxVot8"
+                                title="YouTube video player"
+                                loading="lazy"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="video-info">
+                            <h3>Double Vision</h3>
+                            <p>Double vision, (a favourite of mine)</p>
+                            <p>Otatahau (chch), nz</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2 class="section-title">Timeline</h2>
+                <div class="section-subtitle">↓</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025</div>
+                            <h3>Current Focus</h3>
+                            <p>Machine learning solutions for fitness and health</p>
+                            <p>E-commerce web development, focusing on small businesses</p>
+                            <p>Comprehensive UI/UX design and research</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024</div>
+                            <h3></h3>
+                            <p>Learning Java, C#</p>
+                            <p>Moved to Wellington and VUW</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2023</div>
+                            <h3></h3>
+                            <p>Started study at UC</p>
+                            <p>Began exploring software engineering and problem solving in a technical aspect</p>
+                        </div>
+                    </div>                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2022</div>
+                            <h3></h3>
+                            <p>Fabrication and mechanical work at G Guy Motors</p>
+                            <p>Began exploring fabrication and problem solving in a physical hands-on aspect</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2 class="section-title">Inspiration</h2>
+                <div class="section-subtitle">↓</div>
+                <div class="inspiration-grid">
+                    <div class="inspiration-card">
+                        <div class="inspiration-header">
+                            <h3>Design Videos</h3>
+                        </div>
+                        <div class="inspiration-content">
+                            <p>Channels and videos that inspire my thinking</p>
+                            <ul class="inspiration-list">
+                                <li><a href="https://youtu.be/7uoh6cLTi_4?si=7qMMtKKvvF-bA4Wk" target="_blank">Loyle Carner - journey to Glastonbury</a></li>
+                                <li><a href="https://youtu.be/6flgNWIydW8?si=KTaTyeR61K-ow93P" target="_blank">Phil Atwill - Coronet Peakin</a></li>
+                                <li><a href="https://youtu.be/Wgw9tBynJck?si=A9r1J6RbPNkrX29A" target="_blank">Tokyo spaces</a></li>
+                                <li><a href="https://youtu.be/loGNj5jJBTQ?si=JvXjicFpFH8oAxXc" target="_blank">Tron opening scene</a></li>
+                                <li><a href="https://youtu.be/kCc8FmEb1nY?si=JKMh8Z4ncNahxMpX" target="_blank">GPT from scratch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="inspiration-card">
+                        <div class="inspiration-header">
+                            <h3>Books</h3>
+                        </div>
+                        <div class="inspiration-content">
+                            <p>Readings </p>
+                            <ul class="inspiration-list">
+                                <li><a href="https://www.amazon.com/s?k=The+Design+of+Everyday+Things+Don+Norman" target="_blank">The Design of Everyday Things - Don Norman</a></li>
+                                <li><a href="https://www.amazon.com/s?k=Atomic+Design+Brad+Frost" target="_blank">Atomic Design - Brad Frost</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="inspiration-card">
+                        <div class="inspiration-header">
+                            <h3>Music & Creativity</h3>
+                        </div>
+                        <div class="inspiration-content">
+                            <p>Soundtracks and artists I'm listening to</p>
+                            <ul class="inspiration-list">
+                                <li><a href="https://open.spotify.com/search/aphex%20twin" target="_blank">Aphex Twin</a></li>
+                                <li><a href="https://open.spotify.com/search/portishead" target="_blank">Portishead</a></li>
+                                <li><a href="https://open.spotify.com/search/bicep" target="_blank">Bicep</a></li>
+                                <li><a href="https://open.spotify.com/search/loyle%20carner" target="_blank">Loyle Carner</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-section">
+                <h2 class="section-title">Connect</h2>
+                <div class="section-subtitle">↓</div>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <div class="contact-title">
+                            <a href="https://linkedin.com/in/your-profile" target="_blank"><strong>LinkedIn</strong></a>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contact-title">
+                            <a href="mailto:manu@manurangi.com"><strong>Email</strong></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="back-to-projects">
+            <a href="index.html" class="back-to-home-btn">← Back to Home</a>
         </div>
     </div>
-
-    <div class="section">
-        <div class="section-title">Featured Content</div>
-        <div class="section-subtitle">↓</div>
-        
-        <!-- YouTube Video Embed -->
-        <div class="video-container" style="margin: 20px auto; max-width: 800px;">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                    src="https://www.youtube.com/embed/01zfj0EAaJk"
-                    title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <div class="bio" style="margin-top: 30px;">
-                <p>a short video in victoria park, 2023 (Shot by Kahu Hutton)</p>
-                <p>Otatahau (chch), nz</p>
-            </div>
-        </div>
-
-        <div class="video-container" style="margin: 20px auto; max-width: 800px;">
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe 
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                    src="https://www.youtube.com/embed/SO38mRxVot8"
-                    title="YouTube video player"
-                    allow=""
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </div>
-        <div class="bio" style="margin-top: 30px;">
-            <p>Double vision, (a favourite of mine)</p>
-            <p>Otatahau (chch), nz</p>
-        </div>
-    </div>
-
-    <div class="section">
-        <div class="section-title">Navigation</div>
-        <div class="section-subtitle"><strong>↓</strong></div>
-        <ul class="project-list">
-            <li class="project-item">
-                <div class="project-title"><a href="/" class="Work">Home</a></div>
-            </li>
-        </ul>
-    </div>
-
-    <!-- https://www.youtube.com/watch?v=uddtjXLJf8A&t=269s Video 3 -->
 
     <div class="clock"></div>
 
@@ -103,6 +207,7 @@
     </div>
 
     <script src="src/script.js"></script>
+
     <footer class="copyright">
         © Manu Williams 2025
     </footer>

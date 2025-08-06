@@ -20,25 +20,17 @@ function initCustomCursor() {
     cursor.style.display = 'block';
     cursor.style.opacity = '0.7';
     
-    // Debounce function for performance
     let ticking = false;
     
     function updateCursor(e) {
         if (!ticking) {
             requestAnimationFrame(() => {
-                // Get scroll position
-                const scrollX = window.scrollX;
-                const scrollY = window.scrollY;
-                
-                // Calculate positions including scroll
                 const mouseX = e.clientX;
                 const mouseY = e.clientY;
                 
-                // Update cursor
                 cursor.style.left = `${mouseX}px`;
                 cursor.style.top = `${mouseY}px`;
                 
-                // Update glow - use positioning relative to viewport
                 mouseGlow.style.left = `${mouseX}px`;
                 mouseGlow.style.top = `${mouseY}px`;
                 
@@ -50,7 +42,6 @@ function initCustomCursor() {
     
     document.addEventListener('mousemove', updateCursor, { passive: true });
     
-    // Only change cursor opacity when clicking
     document.addEventListener('mousedown', () => {
         cursor.style.opacity = '1';
     });
@@ -67,32 +58,24 @@ document.addEventListener('DOMContentLoaded', () => {
     initAudioPlayer();
 });
 
-// Function to open the overlay
 function openOverlay() {
     const overlay = document.getElementById('infoOverlay');
     overlay.classList.add('active');
-    
-    // Prevent scrolling on the body while overlay is open
     document.body.style.overflow = 'hidden';
 }
 
-// close the overlay
 function closeOverlay() {
     const overlay = document.getElementById('infoOverlay');
     overlay.classList.remove('active');
-    
-    // Re-enable scrolling on the body
     document.body.style.overflow = '';
 }
 
-// Close overlay when ESC key is pressed
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeOverlay();
     }
 });
 
-// Allow clicking outside the content to close the overlay
 document.getElementById('infoOverlay').addEventListener('click', function(e) {
     if (e.target === this) {
         closeOverlay();
@@ -125,7 +108,6 @@ function initAudioPlayer() {
         { title: 'Portishead - Glory Box', src: 'assets/music/glory box-portishead.mp3' }
     ];
     
-    // Load state from localStorage or with random track
     let currentTrackIndex = localStorage.getItem('currentTrackIndex');
     if (currentTrackIndex === null) {
         currentTrackIndex = Math.floor(Math.random() * playlist.length);
@@ -136,10 +118,7 @@ function initAudioPlayer() {
     let isPlaying = localStorage.getItem('isPlaying') === 'true';
     let currentTime = parseFloat(localStorage.getItem('currentTime')) || 0;
     
-    // Initialize track
     loadTrack(currentTrackIndex);
-    
-    // saved playback position
     audioElement.currentTime = currentTime;
     
     if (isPlaying) {
@@ -148,7 +127,6 @@ function initAudioPlayer() {
         document.querySelector('.now-playing').classList.add('blink');
     }
     
-    // Play button click event
     playButton.addEventListener('click', () => {
         if (!isPlaying) {
             audioElement.play();
@@ -164,10 +142,8 @@ function initAudioPlayer() {
         localStorage.setItem('isPlaying', isPlaying);
     });
 
-    //pause and play with space button 
     document.addEventListener('keydown', function(e){
         if (e.code === 'Space' || e.keyCode === 32) {
-           //stop annoying auto scroll
             e.preventDefault();
 
             if (!isPlaying){
@@ -187,7 +163,6 @@ function initAudioPlayer() {
 
     });
     
-    // Next button click event
     nextButton.addEventListener('click', () => {
         currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
         loadTrack(currentTrackIndex);
@@ -208,15 +183,13 @@ function initAudioPlayer() {
         
         audioElement.src = track.src;
         
-        //typing
         let i = 0;
         const text = track.title;
-        const speed = 30; // typing speed in ms
+        const speed = 30;
         
         function typeWriter() {
             if (i < text.length) {
                 trackName.textContent += text.charAt(i);
-                // width based on current text length
                 const currentWidth = trackName.scrollWidth;
                 trackName.style.width = `${currentWidth}px`;
                 i++;
@@ -229,7 +202,6 @@ function initAudioPlayer() {
         typeWriter();
     }
     
-    //play next track upon track end
     audioElement.addEventListener('ended', () => {
         isPlaying = false;
         playButton.classList.remove('playing');
@@ -249,9 +221,8 @@ function initAudioPlayer() {
         if (!audioElement.paused) {
             localStorage.setItem('currentTime', audioElement.currentTime);
         }
-    }, 5000); // Changed from 1000ms to 5000ms to reduce localStorage writes
+    }, 5000);
 
-    // Save state when leaving page
     window.addEventListener('beforeunload', () => {
         localStorage.setItem('currentTime', audioElement.currentTime);
         localStorage.setItem('isPlaying', isPlaying);

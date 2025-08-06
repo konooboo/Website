@@ -1,63 +1,421 @@
-/* About page specific styles */
+/* About Page Styles */
 .about-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: none;
-    padding-top: 50px;
+    background-color: #000000;
+    color: #7f7f7f;
 }
 
-.about-page .header,
-.about-page .section,
-.about-page .section-title,
-.about-page .section-subtitle,
-.about-page .project-list,
-.about-page .project-item,
-.about-page .bio {
-    text-align: center;
-    width: 100%;
-    max-width: 900px;
+.about-container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 25px;
 }
 
 .about-page .header {
-    margin-top: 0;
+    margin-bottom: 50px;
 }
 
-.about-page .section-title {
+.about-page .bio {
+    max-width: none;
     margin-bottom: 10px;
+    line-height: 1.4;
 }
 
-.about-page .section-subtitle {
-    margin-bottom: 15px; 
-}
-
-.about-page .project-list {
-    margin-top: 10px; 
-}
-
-.about-page .project-item {
-    justify-content: center;
-}
-
-.about-page .project-number {
-    margin-right: 10px;
-}
-
-.about-page .video-container {
-    margin: 20px auto;
-    max-width: 800px;
-    width: 100%;
-}
-
-.about-page .section {
-    display: flex;
-    flex-direction: column;
+.back-button {
+    display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+    color: #7f7f7f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+}
+
+.back-button:hover {
+    color: #ffffff;
+}
+
+.back-to-projects {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+.back-to-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7f7f7f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+}
+
+.back-to-home-btn:hover {
+    color: #ffffff;
+}
+
+.about-content {
+    margin-bottom: 4rem;
+}
+
+.about-section {
+    margin-bottom: 4rem;
+}
+
+.about-section .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.about-section .section-subtitle {
+    font-size: 10px;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.video-card {
+    background: #0b0b0b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    transform: translateY(0);
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.1);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #181818;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+    height: 100%;
+    border: none;
+}
+
+
+
+.video-info {
+    padding: 1.5rem;
+}
+
+.video-info h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a4a4a4;
+    transition: all 0.3s ease;
+}
+
+.video-info p {
+    margin: 0 0 0.5rem 0;
+    color: #575757;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.video-info p:last-child {
+    margin-bottom: 0;
+    color: #7f7f7f;
+    font-size: 0.7rem;
+}
+
+.video-card:hover .video-info h3 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.video-card:hover .video-info p {
+    color: #a4a4a4;
+    text-shadow: 0 0 8px rgba(164, 164, 164, 0.3);
+}
+
+.navigation-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7f7f7f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background: #2a2a2a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 1rem;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-section .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .video-info {
+        padding: 1rem;
+    }
+    
+    .video-info h3 {
+        font-size: 0.9rem;
+    }
+    
+    .video-info p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Connect Section - Uses same styling as home page contact list */
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    background: #555;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    background: #ffffff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.timeline-content {
+    background: #0b0b0b;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(8px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+    border-color: #555;
+}
+
+.timeline-date {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border: 1px solid #333;
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a4a4a4;
+    transition: all 0.3s ease;
+}
+
+.timeline-content p {
+    margin: 0 0 0.5rem 0;
+    color: #575757;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:hover .timeline-content h3 {
+    color: #ffffff;
+}
+
+.timeline-item:hover .timeline-content p {
+    color: #a4a4a4;
+}
+
+/* Inspiration Section */
+.inspiration-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.inspiration-card {
+    background: #0b0b0b;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #333;
+    transform: translateY(0);
+}
+
+.inspiration-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255, 255, 255, 0.1);
+}
+
+.inspiration-header {
+    padding: 1.5rem;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.inspiration-header h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #a4a4a4;
+    transition: all 0.3s ease;
+}
+
+.inspiration-content {
+    padding: 1.5rem;
+}
+
+.inspiration-content p {
+    margin: 0 0 1rem 0;
+    color: #575757;
+    line-height: 1.6;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+}
+
+.inspiration-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inspiration-list li {
+    padding: 0.5rem 0;
+    color: #7f7f7f;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    border-bottom: 1px solid #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.inspiration-list li:last-child {
+    border-bottom: none;
+}
+
+.inspiration-list li a {
+    color: #7f7f7f;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.inspiration-list li:hover {
+    padding-left: 0.5rem;
+}
+
+.inspiration-list li:hover a {
+    color: #ffffff;
+}
+
+.inspiration-card:hover .inspiration-header h3 {
+    color: #ffffff;
+}
+
+.inspiration-card:hover .inspiration-content p {
+    color: #a4a4a4;
+}
+
+
+
+/* Mobile Responsive for new sections */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-item {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline-marker {
+        left: -1.25rem;
+    }
+    
+    .inspiration-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .inspiration-header,
+    .inspiration-content {
+        padding: 1rem;
+    }
 }
 

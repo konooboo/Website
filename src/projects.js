@@ -1,6 +1,5 @@
 // Projects Page JavaScript
 
-// Project data - you can expand this with your actual projects
 const projects = {
     project1: {
         title: "Link",
