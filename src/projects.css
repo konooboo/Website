@@ -627,7 +627,22 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    color: #7f7f7f;
+    color: #7f7f7f !important;
+    text-decoration: none;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+}
+
+.back-to-home-btn:hover {
+    color: #ffffff !important;
+}
+
+.back-to-projects-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #7f7f7f !important;
     text-decoration: none;
     font-weight: 500;
     margin-bottom: 2rem;
@@ -635,7 +650,7 @@
 }
 
 .back-to-projects-btn:hover {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 
